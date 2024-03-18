@@ -4,22 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tutorat</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
 <body>
-    <h1>Demande de Tutorat</h1>
-    <form id="demandeForm">
-        <label for="nom">Nom:</label>
-        <input type="text" id="nom" name="nom"><br><br>
- <label for="phone">Numero de Telephone:</label>
-        <input type="text" id="phone" name="phone"><br><br>
- <label for="email">Email:</label>
-        <input type="text" id="email" name="email"><br><br>
-        <label for="matiere">Matière:</label>
-        <input type="text" id="matiere" name="matiere"><br><br>
-        <button type="submit">Envoyer</button>
-    </form>
-    <div id="message"></div>
-
+    <h1 class="text-3xl font-bold text-center mt-8">Demande de Tutorat</h1>
+    <div class="max-w-md mx-auto mt-8">
+        <form id="demandeForm" class="space-y-4">
+            <div>
+                <label for="nom" class="block">Nom:</label>
+                <input type="text" id="nom" name="nom" class="w-full border-gray-300 rounded-md shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50">
+            </div>
+            <div>
+                <label for="email" class="block">Email:</label>
+                <input type="email" id="email" name="email" class="w-full border-gray-300 rounded-md shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50">
+            </div>
+            <div>
+                <label for="telephone" class="block">Téléphone:</label>
+                <input type="tel" id="telephone" name="telephone" class="w-full border-gray-300 rounded-md shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50">
+            </div>
+            <div>
+                <label for="matiere" class="block">Matière:</label>
+                <input type="text" id="matiere" name="matiere" class="w-full border-gray-300 rounded-md shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50">
+            </div>
+            <div>
+                <button type="submit" class="w-full bg-indigo-600 text-white py-2 px-4 rounded-md hover:bg-indigo-700 focus:outline-none focus:ring focus:ring-indigo-200 focus:ring-opacity-50">Envoyer</button>
+            </div>
+        </form>
+        <div id="message" class="text-center text-green-500 mt-4"></div>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>
